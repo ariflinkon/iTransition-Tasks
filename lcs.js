@@ -1,0 +1,1 @@
+function lcs(s){if(!s.length)return'';let[ss]=s.sort((a,b)=>a.length-b.length);for(let l=ss.length;l>0;l--)for(let st=0;st<=ss.length-l;st++)if(s.every(str=>str.includes(ss.slice(st,st+l))))return ss.slice(st,st+l);return'';}const a=process.argv.slice(2);console.log(a.length?lcs(a):'');
